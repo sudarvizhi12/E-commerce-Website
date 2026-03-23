@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 50px;
+            border: solid 1px rebeccapurple;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: rebeccapurple;
+            color: white;
+            font-size: 16px;
+            width: 100px;
+        }
+
+        button:hover {
+            background-color:purple;
+            color: black;
+        }
+
+    </style>
+
+    
+
+<script>
+    function loginForm(event) {
+        let name = document.getElementById("name");
+     
+        let password = document.getElementById("password");
+
+        if (name.value === "") {
+            alert("Please enter your full name");
+            name.focus();
+            return false;
+        } 
+        
+        
+        else if (password.value === "") {
+            alert("Please enter your password");
+            password.focus();
+            return false;
+        }
+        
+        else if (name.value === "sudar" && password.value === "2717") {
+                alert("Login Success");
+                return true;
+            } 
+        else {
+                alert("Username or password incorrect");
+                return false;
+            }
+        }
+   
+</script>
+
+  
+</head>
+<body>
+    
+    <div class="container">
+        <h1 style="color: rebeccapurple;"> TheEleganza</h1>
+        <hr style="color: rebeccapurple;">
+        <h2 style="color: rebeccapurple;">Log In </h2>
+        <form id="registerForm"  action="TheEleganza.html" onsubmit="return loginForm(event)" >
+            <label>Full Name</label>
+            <input type="text"  id="name" placeholder="Enter your name">
+
+            <label>Password</label>
+            <input type="text" id="password" placeholder="Enter your Password">
+           
+
+            <button type="submit">Log In</button>
+       
+
+        </form>
+        <p> </p>
+        <p>Don't have an account? <a href=C:\Users\sudar\Downloads\HTML\signup.html style= text-decoration:none;>Sign Up</a></p>
+    </div>
+   
+</body>
+</html>
